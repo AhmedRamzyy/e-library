@@ -209,7 +209,7 @@ a {
 .search-form form .form-component .select-class-search .select {
     position: relative;
     margin: 11px auto;
-    widows: 270px;
+    width: 270px;
     height: 2.5em;
     line-height: 3;
     color: #39f2f8;
@@ -299,6 +299,8 @@ a {
 .search-form form .form-component .buttons{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin: auto;
     padding-bottom: 25px;
 }
@@ -307,7 +309,6 @@ a {
 .search-form form .form-component .buttons input{
     display: block;
     width: fit-content;
-    margin: auto;
     margin-bottom: 20px;
     padding: 6px 37px;
     font-size: 20px;
@@ -349,9 +350,12 @@ a {
 }
 @media only screen and (max-width: 768px) {
     .search-form .form{width: auto;}
+    .search-form form .form-component .select-class-search .options{width: 100%}
     .search-form form .form-component .search-field{width: 100%; border-bottom: 1px solid #8c8b8b;}
     .search-form form .form-component .select-class-search{width: 100%;border-bottom: 1px solid #8c8b8b;}
     .search-form form .form-component .about-book .book{width: 100%;border-bottom: 1px solid #8c8b8b;}
+    .search-form form .form-component .buttons a ,
+.search-form form .form-component .buttons input{width: 51%}
 }
 @media only screen and (max-width:1100px){
     .search-form .form{width: auto;}
