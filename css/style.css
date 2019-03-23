@@ -323,6 +323,7 @@ a {
 ::-webkit-input-placeholder { /* Chrome */
     color: #014441;
     font-family:  sans-serif;
+    text-align: center;
 }
   :-ms-input-placeholder { /* IE 10+ */
     color: #014441;
@@ -340,7 +341,7 @@ a {
 }
 @media only screen and (min-width: 300px) and (max-width: 570px){
     .search-form form .form-component .search-field input[type="search"],
-    .search-form form .form-component .about-book .book input[type="text"]{width: 230px;}
+    .search-form form .form-component .about-book .book input{width: 230px;}
 }
 @media only screen and (max-width: 768px) {
     .search-form .form{width: auto;}
