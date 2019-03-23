@@ -6,9 +6,10 @@
 }
 
 body {
-    background-image: url("../images/library.jpg");
+    background-image: url("../images/pick.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
 }
 
 a {
@@ -111,31 +112,6 @@ a {
     margin-right: 0;
 }
 
-.slider-title {
-    color: #fff;
-    text-align: center;
-    padding: 8em 11em 11em;
-    font-family: 'Francois One', sans-serif;
-}
-
-.slider-title h1 {
-    margin: 0;
-    font-weight: 100;
-    text-transform: capitalize;
-    font-family: 'Salsa', cursive;
-    font-size: 30px;
-}
-
-.slider-title h1 span {
-    color: #000;
-}
-
-.slider-title p {
-    text-transform: capitalize;
-    font-size: 25px;
-    margin: 15px;
-}
-
 @media only screen and (max-width: 768px) {
     .navbar-header label {
         display: block;
@@ -187,8 +163,8 @@ a {
 }
 
 .search-form form .form-component .search-field {
-    width: 45%;
-    padding: 15px;
+    width: 32%;
+    padding: 15px 0;
 }
 
 .search-form form .form-component label {
@@ -225,13 +201,14 @@ a {
 }
 
 .search-form form .form-component .select-class-search {
-    width: 45%;
+    width: 34%;
     padding: 15px;
 }
 
 .search-form form .form-component .select-class-search .select {
     position: relative;
     margin: 11px auto;
+    widows: 270px;
     height: 2.5em;
     line-height: 3;
     color: #39f2f8;
@@ -306,7 +283,7 @@ a {
     width: 33.3333%;
 }
 
-.search-form form .form-component .about-book .book input[type="text"]{
+.search-form form .form-component .about-book .book input{
     display: block;
     margin: 10px auto 20px;
     height: 40px;
@@ -322,19 +299,6 @@ a {
     width: 50%;
     margin: auto;
     padding-bottom: 25px;
-}
-.search-form form .form-component .buttons input[type="submit"]{
-    margin: auto auto 20px;
-    height: 40px;
-    font-size: 20px;
-    padding: 0 20px;
-    background: #34495e;
-    color: #39f2f8;
-    border-radius: 12px;
-    outline: none;
-    border: 2px solid #857d7d;
-    cursor: pointer;
-    transition: .3s;
 }
 .search-form form .form-component .buttons a{
     display: block;
@@ -352,7 +316,7 @@ a {
     transition: .3s
     
 }
-.search-form form .form-component .about-book .book input[type="text"]:focus,
+.search-form form .form-component .about-book .book input:focus,
 .search-form form .form-component .search-field input[type="search"]:focus{
     border: 2px solid #11144c;
 }
