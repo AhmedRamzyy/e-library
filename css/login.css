@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Harmattan|Montserrat');
+.login-form
+{
+    margin: 30px 0 ;
+    padding: 0;
+    font-family: sans-serif ;
+}
+.box
+{
+    padding: 100px 30px ;
+    width: 400px ;
+    background: #f5564e;
+    text-align: center ;
+    margin: auto;
+    border-radius: 20px;
+}
+.box h1
+{
+    color: #fff;
+    text-transform: uppercase ;
+    font-weight: 500 ;
+}
+.box input[type = "text"] , .box input[type = "password"]
+{
+    border: 0 ;
+    /* background: #f36a7b ; */
+    display: block ;
+    margin: 20px auto ;
+    text-align: center ;
+    border: 2px solid #857d7d ;
+    padding: 14px 10px ;
+    width: 200px ;
+    outline: none ;
+    color: #fff ;
+    border-radius: 24px ;
+    transition: .25s ;
+}
+.box input[type = "text"]:focus , .box input[type = "password"]:focus
+{
+    width: 280px ;
+    border-color: #11144c ;
+}
+.box input[type = "submit"]
+{
+    font-size: 16px ;
+    font-weight: 400 ;
+    border: 0 ;
+    background: #34495e ;
+    display: block ;
+    margin: 20px auto ;
+    text-align: center ;
+    border: 2px solid #857d7d;
+    padding: 14px 40px ;
+    outline: none ;
+    color: #fff ;
+    border-radius: 24px ;
+    transition: .25s ;
+    cursor: pointer;
+}
+.box input[type = "submit"]:hover
+{
+    color: #f39c12;
+    transform: translateY(-5px)
+}
+.box .remember-me{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.box .remember-me .remember{
+    width: 45%;
+}
+.box .remember-me .remember input{cursor: pointer;}
+.box .remember-me .remember span{
+    color: #fff;
+    font-family: sans-serif;
+}
+.box .remember-me .forget-pass{
+    width: 45%;
+}
+.box .remember-me .forget-pass a{
+    color: #11144c;
+    transition: 1s ease-out;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+.box .remember-me .forget-pass a:hover{color: #fff}
