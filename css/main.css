@@ -269,6 +269,15 @@ a {
     -o-transition: .25s all ease;
     transition: .25s all ease;
 }
+.search-form form .form-component .select-branch{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-form form .form-component .select-branch .select-class-search{width: 32%;}
+.search-form form .form-component .select-branch .select-class-search .options{width: 100%;}
+.search-form form .form-component .select-branch .select-class-search .select{width: 245px;}
 
 .search-form form .form-component .about-book{
     display: flex;
@@ -296,13 +305,35 @@ a {
     color: #04797d;
     font-size: large;
 }
+.search-form form .form-component .about-book .book input[type="file"]{
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+}
+.search-form form .form-component .about-book .book input[type="file"]:before{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    content: 'Select your file';
+    display: inline-block;
+    background: white;
+    border:0;
+    outline: 0;
+    text-align: center;
+    color: #014441;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.search-form form .form-component .about-book .book input[type=file]::-webkit-file-upload-button {
+    visibility: hidden;
+}
 .search-form form .form-component .buttons{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: auto;
-    padding-bottom: 25px;
+    padding: 25px;
 }
 
 .search-form form .form-component .buttons a ,
@@ -319,12 +350,12 @@ a {
     border: 2px solid #857d7d;
     cursor: pointer;
     transition: .3s
-    
 }
 .search-form form .form-component .about-book .book input:focus,
 .search-form form .form-component .search-field input[type="search"]:focus{
     border: 2px solid #11144c;
 }
+.search-form form .form-component .about-book .book input[type="file"]:focus{border: 0;}
 ::-webkit-input-placeholder { /* Chrome */
     color: #014441;
     font-family:  sans-serif;
@@ -347,6 +378,10 @@ a {
 @media only screen and (min-width: 300px) and (max-width: 570px){
     .search-form form .form-component .search-field input[type="search"],
     .search-form form .form-component .about-book .book input{width: 230px;}
+    .search-form form .form-component .select-class-search .select,
+    .search-form form .form-component .select-branch .select-class-search .select{width: 228px;}
+    .search-form form .form-component .select-branch .select-class-search{width: 100%;}
+    .search-form form .form-component .about-book{padding: 0;margin: auto;}
 }
 @media only screen and (max-width: 768px) {
     .search-form .form{width: auto;}
