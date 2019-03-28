@@ -50,9 +50,9 @@
     width: 280px ;
     border-color: #11144c ;
 }
-.box input[type = "submit"]
+.box input[type = "submit"],a.new
 {
-    font-size: 16px ;
+    font-size: 20px ;
     font-weight: 400 ;
     border: 0 ;
     background: #34495e ;
@@ -62,12 +62,12 @@
     border: 2px solid #857d7d;
     padding: 14px 40px ;
     outline: none ;
-    color: #fff ;
+    color: #39f2f8 ;
     border-radius: 24px ;
     transition: .25s ;
     cursor: pointer;
 }
-.box input[type = "submit"]:hover
+.box input[type = "submit"]:hover ,a.new:hover
 {
     color: #f39c12;
     transform: translateY(-5px)
