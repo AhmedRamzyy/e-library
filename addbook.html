@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <!-- page style  -->
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <!-- page title -->
     <title>E-Library</title>
+
 </head>
 
 <body>
@@ -61,11 +63,11 @@
                         </div>
                         <!-- علوم الحاسب -->
                         <div class="select-branch">
-                            <div class="select-class-search computer-science">
+                            <div class="select-class-search ">
                                 <div class="options">
                                     <label for="">علوم الحاسب</label>
-                                    <div class="select">
-                                        <select name="slct" id="slct">
+                                    <div class="select ">
+                                        <select name="slct computer-science" id="slct">
                                             <option value="1"> ---------------------- </option>
                                             <option value="2"> ---------------------- </option>
                                             <option value="3"> ---------------------- </option>
@@ -74,11 +76,11 @@
                                 </div>
                             </div>
                             <!-- نظم المعلومات -->
-                            <div class="select-class-search information-systems">
+                            <div class="select-class-search ">
                                 <div class="options">
                                     <label for="">نظم المعلومات </label>
-                                    <div class="select">
-                                        <select name="slct" id="slct">
+                                    <div class="select ">
+                                        <select name="slct information-systems" id="slct">
                                             <option value="1"> ---------------------- </option>
                                             <option value="2"> ---------------------- </option>
                                             <option value="3"> ---------------------- </option>
@@ -87,11 +89,11 @@
                                 </div>
                             </div>
                             <!-- محاسبه1 -->
-                            <div class="select-class-search accounting">
+                            <div class="select-class-search ">
                                 <div class="options">
                                     <label for=""> محاسبه</label>
-                                    <div class="select">
-                                        <select name="slct" id="slct">
+                                    <div class="select ">
+                                        <select name="slct accounting" id="slct">
                                             <option value="1"> ---------------------- </option>
                                             <option value="2"> ---------------------- </option>
                                             <option value="3"> ---------------------- </option>
@@ -131,20 +133,19 @@
             </div>
         </div>
     </section>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
         $(document).ready(function () {
             $(".cs").click(function () {
-                $(".information-systems").hide();
-                $(".accounting").hide();
+                $(".information-systems")..setAttribute('disabled', true);
+                $(".accounting").setAttribute('disabled', true);
             });
             $(".mis").click(function () {
-                $(".computer-science").hide();
-                $(".accounting").hide();
+                $(".computer-science").setAttribute('disabled', true);
+                $(".accounting").setAttribute('disabled', true);
             });
             $(".acc").click(function () {
-                $(".computer-science").hide();
-                $(".information-systems").hide();
+                $(".computer-science").setAttribute('disabled', true);
+                $(".information-systems").setAttribute('disabled', true);
             });
         });
     </script>
