@@ -53,10 +53,12 @@
                             <div class="options">
                                 <label for="">اختر الشعبه</label>
                                 <div class="select">
-                                    <select name="slct" id="slct">
-                                        <option value="1" class="cs">علوم حاسب </option>
-                                        <option value="2" class="mis">نظم المعلومات</option>
-                                        <option value="3" class="acc">محاسبه</option>
+                                    <select name="slct" class="mainselector" id="slct">
+                                        <option value="0">------------------------------------------------------
+                                        </option>
+                                        <option value="1" class="cs ">علوم الحاسب</option>
+                                        <option value="2" class="mis ">نظم المعلومات</option>
+                                        <option value="3" class="acc ">محاسبه</option>
                                     </select>
                                 </div>
                             </div>
@@ -67,7 +69,8 @@
                                 <div class="options">
                                     <label for="">علوم الحاسب</label>
                                     <div class="select ">
-                                        <select name="slct computer-science" id="slct">
+                                        <select name="slct computer-science" class="computerScience" id="slct"
+                                            disabled="true">
                                             <option value="1"> ---------------------- </option>
                                             <option value="2"> ---------------------- </option>
                                             <option value="3"> ---------------------- </option>
@@ -80,7 +83,8 @@
                                 <div class="options">
                                     <label for="">نظم المعلومات </label>
                                     <div class="select ">
-                                        <select name="slct information-systems" id="slct">
+                                        <select name="slct information-systems" class="informationSystem" id="slct"
+                                            disabled="true">
                                             <option value="1"> ---------------------- </option>
                                             <option value="2"> ---------------------- </option>
                                             <option value="3"> ---------------------- </option>
@@ -92,8 +96,9 @@
                             <div class="select-class-search ">
                                 <div class="options">
                                     <label for=""> محاسبه</label>
-                                    <div class="select ">
-                                        <select name="slct accounting" id="slct">
+                                    <div class="select">
+                                        <select name="slct accounting" class="accounting_placeholder" id="slct"
+                                            disabled="true">
                                             <option value="1"> ---------------------- </option>
                                             <option value="2"> ---------------------- </option>
                                             <option value="3"> ---------------------- </option>
@@ -135,17 +140,30 @@
     </section>
     <script>
         $(document).ready(function () {
-            $(".cs").click(function () {
-                $(".information-systems")..setAttribute('disabled', true);
-                $(".accounting").setAttribute('disabled', true);
-            });
-            $(".mis").click(function () {
-                $(".computer-science").setAttribute('disabled', true);
-                $(".accounting").setAttribute('disabled', true);
-            });
-            $(".acc").click(function () {
-                $(".computer-science").setAttribute('disabled', true);
-                $(".information-systems").setAttribute('disabled', true);
+            $(".mainselector").bind('change', function () {
+                switch ($(this).val()) {
+                    case "1":
+                        $(".accounting_placeholder").attr('disabled', true);
+                        $(".computerScience").attr('disabled', false);
+                        $(".informationSystem").attr('disabled', true);
+                        break;
+
+                    case "2":
+                        $(".accounting_placeholder").attr('disabled', true);
+                        $(".computerScience").attr('disabled', true);
+                        $(".informationSystem").attr('disabled', false);
+                        break;
+
+                    case "3":
+                        $(".accounting_placeholder").attr('disabled', false);
+                        $(".computerScience").attr('disabled', true);
+                        $(".informationSystem").attr('disabled', true);
+                        break;
+                    default:
+                        $(".accounting_placeholder").attr('disabled', true);
+                        $(".computerScience").attr('disabled', true);
+                        $(".informationSystem").attr('disabled', true);
+                }
             });
         });
     </script>
